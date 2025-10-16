@@ -34,7 +34,7 @@
             font-size: 80px;
             z-index: 100;
             transition: transform 0.1s ease-out;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
         }
 
         .layer {
@@ -49,28 +49,60 @@
         .object {
             /* font-size: 60px;
             opacity: 0; */
-            width:100%;
+            width: 100%;
             transition: all 0.5s ease-out;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
         }
 
         .object.visible {
             opacity: 1;
             transform: scale(1);
         }
-        
 
-       .layer-1 { top: -20%; }
-.layer-2 { top: 25%; }
-.layer-3 { top: 60%; }
-.layer-4 { top: 50%; }
-.layer-5 { top: 80%; }
-.layer-6 { top: 80%; }
-.layer-7 { top: 90%; }
-.layer-8 { top: 90%; }
-.layer-9 { top: 95%; }
-.layer-10 { top: 100%; }
-.layer-11 {top: 90%;}
+
+        .layer-1 {
+            top: -20%;
+        }
+
+        .layer-2 {
+            top: 10%;
+        }
+
+        .layer-3 {
+            top: 60%;
+        }
+
+        .layer-4 {
+            top: 50%;
+        }
+
+        .layer-5 {
+            top: 60%;
+        }
+
+        .layer-6 {
+            top: 80%;
+        }
+
+        .layer-7 {
+            top: 90%;
+        }
+
+        .layer-8 {
+            top: 90%;
+        }
+
+        .layer-9 {
+            top: 95%;
+        }
+
+        .layer-10 {
+            top: 100%;
+        }
+
+        .layer-11 {
+            top: 90%;
+        }
 
 
         .progress-bar {
@@ -90,7 +122,7 @@
             color: white;
             font-size: 24px;
             font-weight: bold;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
             padding: 15px 25px;
             border-radius: 10px;
             z-index: 1000;
@@ -99,12 +131,14 @@
 
         .floating-text {
             position: absolute;
-            max-width: 50%; /* or whatever fits visually */
-            white-space: normal; /* allows wrapping */
+            max-width: 40%;
+            /* or whatever fits visually */
+            white-space: normal;
+            /* allows wrapping */
             color: white;
             font-size: 18px;
             font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
             opacity: 0;
             transform: translateY(20px);
             transition: all 0.8s ease-out;
@@ -133,7 +167,7 @@
             transform: translateX(-50%) translateY(20px);
         }
 
-          .floating-text.center.visible {
+        .floating-text.center.visible {
             transform: translateX(-50%) translateY(0);
         }
 
@@ -152,7 +186,7 @@
             font-family: 'Barrio', Arial, sans-serif;
             font-size: 72px;
             color: white;
-            text-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
             margin-bottom: 20px;
             animation: fadeInDown 1s ease-out;
         }
@@ -161,7 +195,7 @@
             font-family: 'Barrio', Arial, sans-serif;
             font-size: 32px;
             color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             animation: fadeInUp 1s ease-out 0.3s both;
         }
 
@@ -170,6 +204,7 @@
                 opacity: 0;
                 transform: translateY(-30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -181,147 +216,337 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-       .object img {
-    width: 100%;        /* fill the full width of the page */
-    height: auto;       /* maintain aspect ratio */
-    display: block;     /* remove any inline gap */
-    object-fit: cover;  /* optional: fills horizontally, can crop slightly */
-}
+        .object img {
+            width: 100%;
+            /* fill the full width of the page */
+            height: auto;
+            /* maintain aspect ratio */
+            display: block;
+            /* remove any inline gap */
+            object-fit: cover;
+            /* optional: fills horizontally, can crop slightly */
+        }
+        .balloon-section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            margin: 20px 0;
+        }
 
-#balloonGif{
-    width: 20vw;           /* make it smaller than full width */
-  height: auto;
-  position: relative;          /* move it horizontally */
-  top: 0;
-  left: 30%;
-  object-fit: contain;   /* keep full image visible */
-}
+        .balloon-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .balloon-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 25px;
+            width: 320px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .balloon-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .balloon-card h3 {
+            font-family: 'Barrio', Arial, sans-serif;
+            font-size: 24px;
+            color: #538ab7;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .balloon-card p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .balloon-card-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 15px;
+            border: 4px solid #eaa769;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .balloon-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .balloon-section-title {
+            font-family: 'Barrio', Arial, sans-serif;
+            font-size: 42px;
+            color: white;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .balloon-decoration {
+            position: absolute;
+            width: 100px;
+            height: 120px;
+            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            box-shadow: inset -10px -10px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .balloon-decoration::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 50px;
+            background: #333;
+        }
+
+        .balloon-1 {
+            top: 10%;
+            left: 10%;
+            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+        }
+
+        .balloon-2 {
+            top: 15%;
+            right: 15%;
+            background: linear-gradient(135deg, #4ecdc4, #6ae2d9);
+            width: 80px;
+            height: 100px;
+        }
+
+        .balloon-3 {
+            bottom: 20%;
+            left: 7%;
+            background: linear-gradient(135deg, #ffe66d, #fff28e);
+            width: 70px;
+            height: 90px;
+        }
+
+        .balloon-4 {
+            bottom: 15%;
+            right: 10%;
+            background: linear-gradient(135deg, #9c89b8, #b8a9d6);
+            width: 90px;
+            height: 110px;
+        }
+
+        @media (max-width: 768px) {
+            .balloon-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .balloon-card {
+                width: 90%;
+                max-width: 350px;
+            }
+            
+            .balloon-section-title {
+                font-size: 32px;
+            }
+        }
+
+        #balloonGif {
+            width: 20vw;
+            /* make it smaller than full width */
+            height: auto;
+            position: relative;
+            /* move it horizontally */
+            left: 15%;
+            object-fit: contain;
+            /* keep full image visible */
+        }
     </style>
 </head>
+
 <body>
     <div class="progress-bar" id="progressBar"></div>
     <div class="distance-counter" id="distanceCounter">0m</div>
-    
+
     <div class="hero-section">
         <h1 class="hero-title">Maple's Design First Year Experience Project</h1>
         <p class="hero-subtitle">Maple F<br>LAS 101</p>
     </div>
-    
+
     <div class="parallax-container">
         <div class="cat" id="cat">🐱</div>
-        
+
         <div class="layer layer-1">
-            <div class ="object"> <img src="images/clouds.PNG" alt="cloud"> </div>
+            <div class="object"> <img src="images/clouds.PNG" alt="cloud"> </div>
         </div>
-        
+
         <div class="layer layer-2">
-             <div class ="object"> <img src="images/balloons.PNG" alt="balloons"> </div>
-            <div class="floating-text left" style="top: -40%;">🌟 Hi! I'm Maple Fan! A freshman in Computer Science and Philosophy! I mildly enjoy coding. In my free time I like to water my plants and play the violin. 
-               <br> <br> <img id="balloonGif" src="images/photo.png" alt="balloons"></div>
-        </div>
+            <div class="balloon-section">
+        <div class="balloon-decoration balloon-1"></div>
+        <div class="balloon-decoration balloon-2"></div>
+        <div class="balloon-decoration balloon-3"></div>
+        <div class="balloon-decoration balloon-4"></div>
         
+        <h2 class="balloon-section-title">About Me</h2>
+        
+        <div class="balloon-container">
+            <div class="balloon-card">
+                <div class="balloon-card-image">
+                    <img src="images/photo.png" alt="Maple Fan">
+                </div>
+                <h3>Hi! I'm Maple Fan!</h3>
+                <p>A freshman in Computer Science and Philosophy! I mildly enjoy coding. In my free time I like to water my plants and play the violin.</p>
+            </div>
+            
+            <div class="balloon-card">
+                <div class="balloon-card-image">
+                    <img src="images/ditto.gif" alt="Ditto">
+                </div>
+                <h3>My Favorite Pokémon</h3>
+                <p>My favorite Pokémon is Ditto. It can transform into any other Pokémon.</p>
+            </div>
+            
+            <div class="balloon-card">
+                <div class="balloon-card-image">
+                    <img src="images/cow.gif" alt="Cow">
+                </div>
+                <h3>My Favorite Animal</h3>
+                <p>My favorite animal is the cow. They are cute and delicious.</p>
+            </div>
+        </div>
+    </div>
+        </div>
+
         <div class="layer layer-3">
-                       <div class ="object"> <img src="images/mountain2.PNG" alt="mountain2"> </div>
-            <div class="floating-text center" style="top: 40%;">🐦 Flying with the birds now!</div>
+            <div class="object"> <img src="images/mountain2.PNG" alt="mountain2"> </div>
+            <div class="floating-text center" style="top: 0%;">🐦 
+                <h3>Inquiry</h3>
+                <p>Although this course was really fun, I can't say that it helped me much with confidence at all. However, I </p>
+            </div>
         </div>
-        
+
         <div class="layer layer-4">
-             <div class ="object"> <img src="images/twoBird.PNG" alt="bird2"> </div>
+            <div class="object"> <img src="images/twoBird.PNG" alt="bird2"> </div>
             <div class="floating-text left" style="top: 25%;">Whoooosh! So fast!</div>
         </div>
-        
+
         <div class="layer layer-5">
-             <div class ="object"> <img src="images/bird.PNG" alt="leaves"> </div>
+            <!-- <div class="object"> <img src="images/balloons.PNG" alt="leaves"> </div> -->
             <!-- <div class="floating-text right" style="top: 35%;">☁️ Through the clouds we go...</div> -->
         </div>
-        
+
         <div class="layer layer-6">
-           <div class ="object"> <img src="images/yellowHill.PNG" alt="yellowHill"> </div>
+            <div class="object"> <img src="images/yellowHill.PNG" alt="yellowHill"> </div>
             <div class="floating-text left" style="top: 45%;">Careful not to get tangled! 😸</div>
         </div>
-        
+
         <div class="layer layer-7">
-            <div class ="object"> <img src="images/orangeHill.PNG" alt="mountain2"> </div>
+            <div class="object"> <img src="images/orangeHill.PNG" alt="mountain2"> </div>
             <div class="floating-text center" style="top: 30%;">✨ Rainbow zone! So pretty!</div>
         </div>
-        
+
         <div class="layer layer-8">
-             <div class ="object"> <img src="images/trees.PNG" alt="tree"> </div>
+            <div class="object"> <img src="images/trees.PNG" alt="tree"> </div>
             <div class="floating-text right" style="top: 50%;">🚁 Helicopters everywhere!</div>
         </div>
-        
+
         <div class="layer layer-9">
-             
-             <div class ="object"> <img src="images/bird.PNG" alt="bird"> </div>
+
+            <div class="object"> <img src="images/bird.PNG" alt="bird"> </div>
             <div class="floating-text left" style="top: 28%;">🎡 Is that a circus?!</div>
         </div>
-        
+
         <div class="layer layer-10">
-            <div class ="object"> <img src="images/kite.PNG" alt="mountain2"> </div>
+            <div class="object"> <img src="images/kite.PNG" alt="mountain2"> </div>
             <div class="floating-text center" style="top: 55%;">Getting closer to the ground...</div>
         </div>
 
-         <div class="layer layer-11">
-            <div class ="object"> <img src="images/leaves.PNG" alt="mountain2"> </div>
+        <div class="layer layer-11">
+            <div class="object"> <img src="images/leaves.PNG" alt="mountain2"> </div>
             <div class="floating-text center" style="top: 55%;">Getting closer to the ground...</div>
         </div>
-        
+
     </div>
 
     <script>
         const cat = document.getElementById('cat');
         const progressBar = document.getElementById('progressBar');
         const distanceCounter = document.getElementById('distanceCounter');
-        
+
         let swayOffset = 0;
         let swayDirection = 1;
         let swaySpeed = 0.05;
-        
+
         function animateSway() {
             swayOffset += swaySpeed * swayDirection;
-            
+
             if (Math.abs(swayOffset) > 15) {
                 swayDirection *= -1;
             }
-            
+
             cat.style.transform = `translate(calc(-50% + ${swayOffset}px), -50%) rotate(${swayOffset * 0.5}deg)`;
             requestAnimationFrame(animateSway);
         }
-        
+
         animateSway();
-        
+
         function updateParallax() {
             const scrolled = window.scrollY;
             const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
             const scrollPercent = (scrolled / maxScroll) * 100;
-            
+
             progressBar.style.width = scrollPercent + '%';
-            
+
             const distance = Math.floor((scrolled / maxScroll) * 1000);
             distanceCounter.textContent = distance + 'm';
-            
+
             document.querySelectorAll('.layer').forEach((layer, index) => {
                 const speed = (index + 1) * 0.03;
                 const yPos = -(scrolled * speed);
                 layer.style.transform = `translateY(${yPos}px)`;
-                
+
                 const layerTop = layer.offsetTop + yPos;
                 const viewportTop = scrolled;
                 const viewportBottom = scrolled + window.innerHeight;
-                
+
                 if (layerTop > viewportTop - 200 && layerTop < viewportBottom + 200) {
                     layer.querySelectorAll('.object').forEach((obj, i) => {
                         setTimeout(() => {
                             obj.classList.add('visible');
                         }, i * 100);
                     });
-                    
+
                     layer.querySelectorAll('.floating-text').forEach((text, i) => {
                         setTimeout(() => {
                             text.classList.add('visible');
@@ -330,9 +555,10 @@
                 }
             });
         }
-        
+
         window.addEventListener('scroll', updateParallax);
         updateParallax();
     </script>
 </body>
+
 </html>
