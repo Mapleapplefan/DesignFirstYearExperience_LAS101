@@ -73,7 +73,11 @@
         }
 
         .layer-4 {
-            top: 50%;
+            top: 53%;
+        }
+
+        .layer-45 {
+            top: 40%;
         }
 
         .layer-5 {
@@ -81,11 +85,11 @@
         }
 
         .layer-6 {
-            top: 80%;
+            top: 90%;
         }
 
         .layer-7 {
-            top: 90%;
+            top: 100%;
         }
 
         .layer-8 {
@@ -233,6 +237,7 @@
             object-fit: cover;
             /* optional: fills horizontally, can crop slightly */
         }
+
         .balloon-section {
             position: relative;
             width: 100%;
@@ -371,12 +376,12 @@
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .balloon-card {
                 width: 90%;
                 max-width: 350px;
             }
-            
+
             .balloon-section-title {
                 font-size: 32px;
             }
@@ -392,6 +397,83 @@
             object-fit: contain;
             /* keep full image visible */
         }
+
+.hover-card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+            opacity: 0;
+            z-index: 10;
+        }
+
+        .hover-card.visible {
+            opacity: 1;
+        }
+
+        .hover-card:hover {
+            transform: translate(-50%, -50%) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eaa769;
+            padding-bottom: 15px;
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-right: 15px;
+        }
+
+        .card-title {
+            font-family: 'Barrio', Arial, sans-serif;
+            font-size: 32px;
+            color: #538ab7;
+            margin: 0;
+        }
+
+        .card-content {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .card-highlight {
+            background: linear-gradient(120deg, #ffd89b 0%, #ff9d6c 100%);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .inquiry{
+            display: flex;
+            justify-content: center;
+        }
+
+        .inquiry_section{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width:100%;
+            margin: 0 auto;
+        }
+
+        #yo{
+             width: 500px;
+        }
+
     </style>
 </head>
 
@@ -413,52 +495,76 @@
 
         <div class="layer layer-2">
             <div class="balloon-section">
-        <div class="balloon-decoration balloon-1"></div>
-        <div class="balloon-decoration balloon-2"></div>
-        <div class="balloon-decoration balloon-3"></div>
-        <div class="balloon-decoration balloon-4"></div>
-        
-        <h2 class="balloon-section-title">About Me</h2>
-        
-        <div class="balloon-container">
-            <div class="balloon-card">
-                <div class="balloon-card-image">
-                    <img src="images/photo.png" alt="Maple Fan">
+                <div class="balloon-decoration balloon-1"></div>
+                <div class="balloon-decoration balloon-2"></div>
+                <div class="balloon-decoration balloon-3"></div>
+                <div class="balloon-decoration balloon-4"></div>
+
+                <h2 class="balloon-section-title">About Me</h2>
+
+                <div class="balloon-container">
+                    <div class="balloon-card">
+                        <div class="balloon-card-image">
+                            <img src="images/photo.png" alt="Maple Fan">
+                        </div>
+                        <h3>Hi! I'm Maple Fan!</h3>
+                        <p>A freshman in Computer Science and Philosophy! I mildly enjoy coding. In my free time I like
+                            to water my plants and play the violin.</p>
+                    </div>
+
+                    <div class="balloon-card">
+                        <div class="balloon-card-image">
+                            <img src="images/ditto.gif" alt="Ditto">
+                        </div>
+                        <h3>My Favorite Pokémon</h3>
+                        <p>My favorite Pokémon is Ditto. It can transform into any other Pokémon.</p>
+                    </div>
+
+                    <div class="balloon-card">
+                        <div class="balloon-card-image">
+                            <img src="images/cow.gif" alt="Cow">
+                        </div>
+                        <h3>My Favorite Animal</h3>
+                        <p>My favorite animal is the cow. They are cute and delicious.</p>
+                    </div>
                 </div>
-                <h3>Hi! I'm Maple Fan!</h3>
-                <p>A freshman in Computer Science and Philosophy! I mildly enjoy coding. In my free time I like to water my plants and play the violin.</p>
+
             </div>
-            
-            <div class="balloon-card">
-                <div class="balloon-card-image">
-                    <img src="images/ditto.gif" alt="Ditto">
-                </div>
-                <h3>My Favorite Pokémon</h3>
-                <p>My favorite Pokémon is Ditto. It can transform into any other Pokémon.</p>
-            </div>
-            
-            <div class="balloon-card">
-                <div class="balloon-card-image">
-                    <img src="images/cow.gif" alt="Cow">
-                </div>
-                <h3>My Favorite Animal</h3>
-                <p>My favorite animal is the cow. They are cute and delicious.</p>
-            </div>
-        </div>
-    </div>
         </div>
 
         <div class="layer layer-3">
             <div class="object"> <img src="images/mountain2.PNG" alt="mountain2"> </div>
-            <div class="floating-text center" style="top: 0%;">🐦 
-                <h3>Inquiry</h3>
-                <p>Although this course was really fun, I can't say that it helped me much with confidence at all. However, I </p>
-            </div>
         </div>
 
-        <div class="layer layer-4">
+
+        <div class="layer layer-45">
+            <div class ="inquiry">
+            <div class="inquiry_section">
+                <div id="yo" class="balloon-card">
+                    <div class = "card-header">
+                        <div class = "card-title">INQUIRE</div></div>
+                    <div class ="card-content">
+                        LAS 101 was a very unique course that I was not expecting to come into UIUC. However, it has proven to be a very fun, interactive, and wholesome class that does its job of being an LAS orientation correctly. Although I believe there was a bit of busy work, most of the homework is manageable and the quizzes are well made. I believe that the course did a great job in introducing RSO’s, opportunities, and fun things to do on campus. I came into LAS 101 with a couple questions on friendship and healthcare, both of which have been answered. In addition, I was challenged to step outside of my comfort zone and go check out random things on campus. What I liked most about this course was that as well as the amazing plethora of students that I got to meet. I learned about a lot of different majors and the class itself was one of the most diverse I’ve seen. 
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="inquiry_section">
+                <div id="yo" class="balloon-card">
+                    <div class = "card-header">
+                        <div class = "card-title">ENGAGE</div></div>
+                    <div class ="card-content">
+                        In these few weeks I have gone to a lot of events and RSO’s! Most of the RSO’s that I am currently in are project-based, meaning I am on a team and we work to finish a project by the end of the semester and year. Some of these include MedLaunch, Neurotech, Illinois Design Challenge, Design for America, Psychology Survey Club, and Game Builders. I like project based clubs since it's easier to make friends within a smaller group of people + I get something to put on my resume. I am also a part of WCS, Horticulture club, and Film Score Orchestra. These are the clubs I mainly do for social benefit. For WCS, I just attended Code Ada with 2 friends and we made a web-game. It was very interesting but made me very tired. A Horticulture club is a club that I pick and choose which meetings I want to go to. So far, I’ve gone to their free-dorm plant giveaway, free-pumpkin-painting session, and apple picking social. 
+                    </div>
+                    
+                </div>
+            </div>
+            </div>
+
+        </div>
+
+         <div class="layer layer-4">
             <div class="object"> <img src="images/twoBird.PNG" alt="bird2"> </div>
-            <div class="floating-text left" style="top: 25%;">Whoooosh! So fast!</div>
         </div>
 
         <div class="layer layer-5">
@@ -468,23 +574,20 @@
 
         <div class="layer layer-6">
             <div class="object"> <img src="images/yellowHill.PNG" alt="yellowHill"> </div>
-            <div class="floating-text left" style="top: 45%;">Careful not to get tangled! 😸</div>
+            <div class="floating-text left" style="top: 45%;">I love kites!</div>
         </div>
 
         <div class="layer layer-7">
             <div class="object"> <img src="images/orangeHill.PNG" alt="mountain2"> </div>
-            <div class="floating-text center" style="top: 30%;">✨ Rainbow zone! So pretty!</div>
         </div>
 
         <div class="layer layer-8">
             <div class="object"> <img src="images/trees.PNG" alt="tree"> </div>
-            <div class="floating-text right" style="top: 50%;">🚁 Helicopters everywhere!</div>
         </div>
 
         <div class="layer layer-9">
 
             <div class="object"> <img src="images/bird.PNG" alt="bird"> </div>
-            <div class="floating-text left" style="top: 28%;">🎡 Is that a circus?!</div>
         </div>
 
         <div class="layer layer-10">
@@ -494,10 +597,272 @@
 
         <div class="layer layer-11">
             <div class="object"> <img src="images/leaves.PNG" alt="mountain2"> </div>
-            <div class="floating-text center" style="top: 55%;">Getting closer to the ground...</div>
         </div>
 
     </div>
+
+    <!-- illini action plan  -->
+    <div class = "final-layer">
+        <section class="action-plans">
+        <div class="container">
+            <h2 class="section-title">Illini Action Plan</h2>
+            <div class="plans-grid">
+                <!-- Plan 1 -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <div class="plan-icon">💸</div>
+                        <h3 class="plan-title">Passive Income</h3>
+                        <p>Whether its trading stocks, tutoring, or becoming a research subject, I want to find some side gig that gets me passive income. I tried to trade stocks before and I never went anywhere with it cause I didn't lock in. So, I am putting it on my plan to lock in. </p>
+                    </div>
+                    <div class="plan-content">
+                        <ul class="plan-list">
+                            <li class="plan-item">
+                                <span class="item-check">✓</span>
+                                <span class="item-text">Try to get an A in my CS classes (future tutoring)</span>
+                            </li>
+                            <li class="plan-item">
+                                <span class="item-check">✓</span>
+                                <span class="item-text">Learn personal finance skills</span>
+                            </li>
+                            <li class="plan-item">
+                                <span class="item-check">✓</span>
+                                <span class="item-text">Join a finance-specific student organization next semester</span>
+                            </li>
+                            <li class="plan-item">
+                                <span class="item-check">✓</span>
+                                <span class="item-text">Apply to be a test subject</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="plan-footer">
+                        <button class="plan-button">My progress</button>
+                    </div>
+                </div>
+
+                <!-- Plan 2 -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <div class="plan-icon">📈</div>
+                        <h3 class="plan-title">Maintain >3.7 gpa</h3>
+                        <p> Maining above a 3.7 gpa allows me to have a lot of opportunities. For example, I could apply to become a James Scholar, I would look good in applications for research, and it would be wise to maintain a high gpa in case I go to grad school. </p>
+                    </div>
+                    <div class="plan-content">
+                        <ul class="plan-list">
+                            <li class="plan-item">
+                                <span class="item-check">✓</span>
+                                <span class="item-text">Plan future courses with advisor. Make sure not too difficult.</span>
+                            </li>
+                            <li class="plan-item">
+                                <span class="item-check">✓</span>
+                                <span class="item-text">Talk to my professors</span>
+                            </li>
+                            <li class="plan-item">
+                                <span class="item-check">✓</span>
+                                <span class="item-text">Make study plans</span>
+                            </li>
+                            <li class="plan-item">
+                                <span class="item-check">✓</span>
+                                <span class="item-text">Use focus-friends to study</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="plan-footer">
+                        <button class="plan-button">My progress</button>
+                    </div>
+                </div>
+
+                <!-- Plan 3  -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <div class="plan-icon">🎯</div>
+                        <h3 class="plan-title">Get an internship</h3>
+                        <p>As a CS+Philosophy major, I need to get a tech internship! People who hire for CS care about experience more than anything else. I am willing to get an unpaid internship if it means gaining experience.</p>
+                    </div>
+                    <div class="plan-content">
+                        <ul class="plan-list">
+                            <li class="plan-item">
+                                <span class="item-check">✓</span>
+                                <span class="item-text">Mass apply on handshake </span>
+                            </li>
+                            <li class="plan-item">
+                                <span class="item-check">✓</span>
+                                <span class="item-text">Secure full-time position before graduation</span>
+                            </li>
+                            <li class="plan-item">
+                                <span class="item-check">✓</span>
+                                <span class="item-text">Build professional portfolio website</span>
+                            </li>
+                            <li class="plan-item">
+                                <span class="item-check">✓</span>
+                                <span class="item-text">Establish mentorship relationships</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="plan-footer">
+                        <button class="plan-button">My progress</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+    </div>
+    <style>
+        .final-layer {
+    position: relative;
+    z-index: 1; /* Lower than parallax layers */
+    margin-top: 0; /* Remove any gap */
+}
+
+/* Action plans styling */
+.action-plans {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #7fb5e4 0%, #4b7ca2 100%);
+    position: relative;
+}
+
+.action-plans .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    align-items: start;
+}
+
+.plan-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.plan-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.plan-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.plan-title {
+    font-size: 1.5rem;
+    color: #2d3748;
+    font-weight: 600;
+    margin: 0;
+}
+
+.plan-content {
+    margin-bottom: 25px;
+}
+
+.plan-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plan-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 0;
+    border-bottom: 1px solid #f8f9fa;
+}
+
+.plan-item:last-child {
+    border-bottom: none;
+}
+
+.item-check {
+    color: #48bb78;
+    font-weight: bold;
+    margin-right: 12px;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.item-text {
+    color: #4a5568;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.plan-footer {
+    text-align: center;
+}
+
+.plan-header p{
+    font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+}
+
+.plan-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.plan-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+@media (max-width: 768px) {
+    .action-plans {
+        padding: 50px 15px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .plans-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .plan-card {
+        padding: 25px;
+    }
+    
+    .plan-icon {
+        font-size: 2.5rem;
+    }
+}
+    </style>
 
     <script>
         const cat = document.getElementById('cat');
